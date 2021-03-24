@@ -70,8 +70,9 @@ print("total: "+str(total))
 
 #ERROR 3: quiero modificar la butaca (2,4) de la lista anterior para que sea la (3,4) y no me deja.
 print("\n------------- Error 3 -----------------")
-seats[0][1]=3
+#El error ocurre por que esta mal indexada la tupla si incicas que casilla quieres modificar y le asignas la nueva tupla funciona
+seats[0]= (3 , 4)
 total = 0
-cinema.count_free_seats(seats,total)
+total = cinema.count_free_seats(seats,total)
 print("total: "+str(total))
         
