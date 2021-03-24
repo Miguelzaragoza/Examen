@@ -21,8 +21,11 @@ def get_list(nfichero):
 def mas_antiguo(lista, año):
     lista_res = list()
     for i in lista:
-        if((i.año) >= 1900 or int(i.año) <= 2021):
-            
+        if(int(i.año) >= 1900 and int(i.año) <= 2021):
+            if(int(i.año) <= int(año)):
+                lista_res.append(i.titulo)
+        else:
+            raise ValueError("Año incorrecto")   
     return lista_res
 
 
